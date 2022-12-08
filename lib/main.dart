@@ -67,20 +67,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<Transaction> _transactions = [
-    // Transaction(
-    //   id: 1,
-    //   title: "Mercado",
-    //   value: 432.95,
-    //   date: DateTime.now().subtract(Duration(days: 5)),
-    // ),
-    // Transaction(
-    //   id: 2,
-    //   title: "Tênis",
-    //   value: 199.99,
-    //   date: DateTime.now().subtract(const Duration(days: 3)),
-    // ),
-  ];
+  final List<Transaction> _transactions = [];
 
   bool _displayChart = false;
 
@@ -158,22 +145,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // if (isLandscape)
-              //   Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Text("Exibir Gráfico"),
-              //       Switch.adaptive(
-              //         value: _displayChart,
-              //         activeColor: Colors.purple,
-              //         onChanged: ((value) {
-              //           setState(() {
-              //             _displayChart = value;
-              //           });
-              //         }),
-              //       )
-              //     ],
-              //   ),
               if (_displayChart || !isLandscape)
                 Container(
                   height: avaliableHeight * (isLandscape ? 0.8 : 0.3),
